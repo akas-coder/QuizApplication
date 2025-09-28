@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Quiz Result</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<h2>Result</h2>
+<p>Your Score  : <span th:text="${score}"></span> / <span th:text="${total}"></span></p>
+<p>Your percentage score : <span th:text="${percentage}" ></span>% </p>
+<div id="ak">
+<h3>Correct Answers:</h3>
+<ul>
+  <li th:each="ans : ${correctAnswers}" th:text="${ans}"></li>
+</ul>
+<h3>Wrong Answers:</h3>
+<ul>
+  <li th:each="wrongs : ${wrongAnswers}" th:text="${wrongs}"></li>
+</ul>
+</div>
+
+</body>
+</html>
